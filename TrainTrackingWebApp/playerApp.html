@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="webPlayer">
+<head>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>WebApp HoneyJade</title>
+	<meta name="viewport" content="width=device-width">
+	<script src="Scripts/angular.js"></script>
+
+	
+<script src="Scripts/bower-angular-sanitize-master/angular-sanitize.min.js"></script>
+	
+<script src="Scripts/videogular-master/app/scripts/com/2fdevs/videogular/videogular.js"></script>
+<script src="Scripts/videogular-master/app/scripts/com/2fdevs/videogular/plugins/controls.js"></script>
+<script src="Scripts/videogular-master/app/scripts/com/2fdevs/videogular/plugins/overlay-play.js"></script>
+<script src="Scripts/videogular-master/app/scripts/com/2fdevs/videogular/plugins/poster.js"></script>
+<script src="Scripts/videogular-master/app/scripts/com/2fdevs/videogular/plugins/buffering.js"></script>
+	
+	<script src="/socket.io/socket.io.js"></script>
+
+<script src="Scripts/CustomScripts/controllers.js"></script>
+
+	
+	
+
+		<script src="Scripts/CustomScripts/app.js"></script>	
+
+		
+
+</head>
+<body>
+
+
+<H1><p>demo player</p></H1>
+
+<div ng-controller="playerController as playCtrl"> 
+
+<div>
+
+	<videogular vg-theme="playCtrl.config.theme">
+		<vg-video vg-src="playCtrl.config.sources"> 
+		</vg-video>
+<vg-overlay-play></vg-overlay-play>
+
+<vg-fullscreenButton>
+
+</vg-fullscreenButton>		
+<vg-onload-app></vg-onload-app>
+
+	</videogular>	
+
+</div>	
+
+
+
+<div><button ng-click="doUpdateScp()" /> update</button>.... <button ng-click="removeScp()" >remove</button></div>
+
+
+</div>
+
+
+
+</body>
+</html>
+
